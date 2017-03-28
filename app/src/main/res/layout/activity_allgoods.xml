@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AllGoodsActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <RadioGroup
+        android:id="@+id/allgoods_order_rg"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/allgoods_order_normal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/goods_radio_bg_button_select"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5px"
+            android:text="默认排序"
+            android:textColor="@color/colorTextMain"
+            android:textSize="@dimen/shop_price" />
+
+        <RadioButton
+            android:id="@+id/allgoods_order_asc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/goods_radio_bg_button_select"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_above"
+            android:gravity="center"
+            android:padding="5px"
+            android:text="价格升序"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/shop_price" />
+
+        <RadioButton
+            android:id="@+id/allgoods_order_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/goods_radio_bg_button_select"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_below"
+            android:gravity="center"
+            android:padding="5px"
+            android:text="价格降序"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/shop_price" />
+    </RadioGroup>
+
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/goods_springView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/goods_gv"
+            android:layout_width="match_parent"
+            android:layout_margin="5px"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="20px"
+            android:listSelector="#00000000"
+            android:numColumns="2"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:verticalSpacing="20px"></GridView>
+    </com.liaoinstan.springview.widget.SpringView>
+</com.zhy.autolayout.AutoLinearLayout>
